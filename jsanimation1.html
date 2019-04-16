@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5">
+    <style>
+        * {
+            padding: 0;
+            border: 0;
+            margin: 0;
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility:hidden;
+            -ms-backface-visibility:hidden;
+            backface-visibility:hidden;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+
+        .content {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+
+        .content .mountain{
+            position: absolute;
+            top:0;
+            height: 50%;
+            width: 100%;
+        }
+
+        .content .road{
+            position: absolute;
+            bottom:0;
+            height: 50%;
+            width: 100%;
+        }
+    </style>
+    <script src='js/jquery-1.12.4.min.js'></script>
+    <script src="js/background-swipe.js"></script>
+</head>
+<body>
+
+<div class="content">
+    <div class="mountain"></div>
+    <div class="road"></div>
+</div>
+
+</body>
+
+<script>
+    $(function(){
+        $('.mountain').backgroundSwipe({
+            delay: 5,
+            image: './img/bggg.jpg',
+            breakLength: 900
+        });
+        $('.road').backgroundSwipe({
+            delay: 5,
+            image: './img/bgggggs.jpg',
+            breakLength: 100
+        });
+    })
+</script>
+
+</html>
